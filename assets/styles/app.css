@@ -1,3 +1,77 @@
-body {
-    background-color: skyblue;
+
+/*déclaration des variables*/
+:root {
+  --couleur-primaire: rgb(10, 78, 204);
+  --bordure-couleur:#a8c0ff;
 }
+
+    .d-flex{
+        background: white;
+        border:none;
+        border-radius: 0px 0px;
+        box-shadow: none;
+        padding: 0px;
+    }
+    form{
+        background: linear-gradient(135deg, #dbe9ff, #fef4ff);
+        border: 2px solid var(--bordure-couleur);
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(168, 192, 255, 0.5);
+        padding: 30px;
+        color: rgba(0, 0, 0, 0.68);
+    }
+    form button , .connexionForm button{
+        background-color:var(--couleur-primaire) ;
+        border: none;
+        color: white;
+        width: 100%;
+    }
+    .connexionForm input{
+        margin-bottom: 10px;
+    }
+    .connexionForm{
+        width: 35%;
+    }
+    .connexionForm a {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        margin-top: 12px;
+    }
+    .navbar a{
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .navbar a:hover{
+        border-bottom: 1px solid #e0e7fa;
+        transition: 0.5s ease-in;
+        -ms-transform-origin-y: 3%;
+        color:rgb(144, 178, 241);
+    }
+
+    .navbar-white .container .row .col-md-4 img{
+        width:70px;
+    }
+    .navbar-white .container .row .col-md-4{
+        display: flex;
+    }
+    body{
+        padding-top: 70px;
+    }
+    
+    .comfortaa-uniquifier {
+    font-family: "Comfortaa", sans-serif;
+    color:var(--couleur-primaire);
+    font-weight: bolder;
+    margin-top: 12px;
+    cursor: pointer;
+    }
+    .comfortaa-uniquifier a:hover{
+        border-bottom: none;
+        transition: none;
+        color: var(--couleur-primaire);
+    }

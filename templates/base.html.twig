@@ -3,8 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}
+          {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
         {% block javascripts %}
@@ -12,6 +16,43 @@
         {% endblock %}
     </head>
     <body>
+  <nav class="navbar navbar-expand-lg navbar-white mb-5 bg-white fixed-top shadow-sm">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{{ asset('images/shopping-icon-2184065_1280.webp') }}" alt="shooping">
+          <h3 class="navbar-brand ms-2 comfortaa-uniquifier"><a href="{{path('app_home')}}">Kiri Kita</a></h3>
+        </div>
+        <div class="col-md-8">
+          <ul>
+            <li><a href="{{path('app_article')}}">Article</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i>Compte</a></li>
+            <li><a href="#">Aide</a></li>
+            <li>
+              <form class="d-flex input-group w-70">
+              <input
+                type="search"
+                class="form-control rounded"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="search-addon"
+              />
+              <span class="input-group-text border-0" id="search-addon">
+                <i class="fa-solid fa-magnifying-glass fa-sm"></i>
+              </span>
+              </form>
+            </li>
+            <li><a href="#">Panier</a></li>
+          </ul>
+        </div>
+      </div>
+      
+  </div>
+</nav>
+    <main class="container my-5">
         {% block body %}{% endblock %}
+    </main>
+        
     </body>
 </html>
